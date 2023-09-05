@@ -1,3 +1,7 @@
+class bacon:
+    VERSION = "0.0.1"
+    UPDATE = False
+    NAME = "BaconShell"
 class colors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -9,4 +13,15 @@ class colors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(f"{colors.BOLD}baconShell{colors.ENDC} Installer [0.0.1]")
+import time
+print(f"{colors.BOLD}{colors.OKGREEN}baconShell Installer {bacon.VERSION} {colors.ENDC}")
+print("This app installs baconShell on your computer")
+print("[A] Upgrade Installation")
+print("[B] Clean Installation")
+stg1 = True
+while stg1 == True:
+    a = ["a", "A", "[A]"]
+    option = input()
+    if option in a:
+        if bacon.UPDATE == False:
+            print(f"{colors.WARNING}⚠️INSUFFICIENT VERSION⚠️{colors.ENDC} {colors.BOLD}{colors.FAIL}Requires Clean Install.{colors.ENDC}")
