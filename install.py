@@ -49,6 +49,37 @@ def cclass():
         print("COLORS CLASS", "[=========-] 90%")
     elif progress2 == 10:
         print("COLORS CLASS", "[==========] 100%")
+def iclass():
+    if progress3 == 0:
+        print("IMPORTS", "[----] 0%")
+    elif progress3 == 1:
+        print("IMPORTS", "[=---] 25%")
+    elif progress3 == 2:
+        print("IMPORTS", "[==--] 50%")
+    elif progress3 == 3:
+        print("IMPORTS", "[===-] 75%")
+    elif progress3 == 4:
+        print("IMPORTS", "[====] 100%")
+def session():
+    if prog == 0:
+        print("SESSION", "[-----] 0%")
+    elif prog == 1:
+        print("SESSION", "[=----] 20%")
+    elif prog == 2:
+        print("SESSION", "[==---] 40%")
+    elif prog == 3:
+        print("SESSION", "[===--] 60%")
+    elif prog == 4:
+        print("SESSION", "[====-] 80%")
+    elif prog == 5:
+        print("SESSION", "[=====] 100%")
+def com():
+    if progress4 == 0:
+        print("COMMANDS", "[--] 0%")
+    elif progress4 == 1:
+        print("COMMANDS", "[=-] 50%")
+    elif progress4 == 2:
+        print("COMMANDS", "[==] 100%")
 import os
 import time
 print(f"{colors.BOLD}{colors.OKGREEN}{bacon.NAME} Installer {bacon.VERSION} {colors.ENDC}")
@@ -159,4 +190,90 @@ while stg1 == True:
             os.system('cls')
             bclass()
             cclass()
+            nl()
+            setup.write(f"import os")
+            progress3 = 1
+            time.sleep(0.5)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            nl()
+            setup.write(f"import shutil;import platform")
+            progress3 = 2
+            time.sleep(0.5)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            nl()
+            setup.write(f"import time;import sys")
+            progress3 = 3
+            time.sleep(0.5)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            nl()
+            setup.write(f"import subprocess\nfrom sys import version_info")
+            progress3 = 4
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            nl()
+            setup.write(f"print(f'{colors.BOLD}{colors.OKGREEN}{bacon.NAME}{colors.ENDC}')\nsession = True")
+            prog = 1
+            time.sleep(0.5)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            nl()
+            setup.write(f"while session == True:")
+            prog = 3
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            nl()
+            setup.write(f"  command = input()")
+            prog = 5
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            nl()
+            setup.write(f"  if command == 'HOST.os':")
+            nl()
+            setup.write(f"      print('>', str(platform.system()))")
+            nl()
+            setup.write(f"  elif command == 'HOST':")
+            nl()
+            setup.write(f"      print('>', str(platform.system()) + ' ' + str(platform.release()))")
+            progress4 = 1
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            com()
+            nl()
+            setup.write(f"  elif command == 'HOST.ver':")
+            setup.write(f"      print('>', str(platform.release()))")
+            progress4 = 2
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            com()
             nl()
