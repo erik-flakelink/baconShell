@@ -75,11 +75,13 @@ def session():
         print("SESSION", "[=====] 100%")
 def com():
     if progress4 == 0:
-        print("COMMANDS", "[--] 0%")
+        print("COMMANDS", "[---] 0%")
     elif progress4 == 1:
-        print("COMMANDS", "[=-] 50%")
+        print("COMMANDS", "[=--] 33%")
     elif progress4 == 2:
-        print("COMMANDS", "[==] 100%")
+        print("COMMANDS", "[==-] 66%")
+    elif progress4 == 3:
+        print("COMMANDS", "[===] 100%")
 import os
 import time
 print(f"{colors.BOLD}{colors.OKGREEN}{bacon.NAME} Installer {bacon.VERSION} {colors.ENDC}")
@@ -266,9 +268,31 @@ while stg1 == True:
             session()
             com()
             nl()
-            setup.write(f"  elif command == 'HOST.ver':")
+            setup.write(f"  elif command == 'HOST.ver':\n")
             setup.write(f"      print('>', str(platform.release()))")
             progress4 = 2
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            com()
+            nl()
+            setup.write(f"  elif command == 'HOST.rel':\n")
+            setup.write(f"      print('>', str(platform.release()))")
+            progress4 = 2
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            com()
+            nl()
+            setup.write(f"  elif command == 'BACON.id':\n")
+            setup.write(f"      print('>', '{bacon.NAME}')")
+            progress4 = 3
             time.sleep(1)
             os.system('cls')
             bclass()
