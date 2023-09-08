@@ -1,5 +1,5 @@
 class bacon:
-    VERSION = "0.0.5"
+    VERSION = "0.1.1"
     UPDATE = False
     NAME = "baconShell"
 class colors:
@@ -320,8 +320,28 @@ while stg1 == True:
             nl()
             setup.write(f"  elif command == 'BACON.ver':\n")
             setup.write(f"      print('>', '{bacon.VERSION}')")
+            nl()
+            setup.write(f"  elif command == 'HELP' or command == 'BACON.assist':\n")
+            nl()
+            setup.write(f"      print('>', 'HOST - Shows ALL OS details')")
+            nl()
+            setup.write(f"      print('>', 'HOST.os - Shows OS name')")
+            nl()
+            setup.write(f"      print('>', 'HOST.ver + HOST.rel - Shows OS Version')")
+            nl()
+            setup.write(f"      print('>', 'BACON - Shows baconShell details')")
+            nl()
+            setup.write(f"      print('>', 'BACON.id - Shows the ID of baconShell')")
+            nl()
+            setup.write(f"      print('>', 'BACON.ver - Shows baconShell version')")
+            nl()
+            setup.write(f"      print('>', 'BACON.dump - Configures Uninstallation File')")
+            nl()
+            setup.write(f"      print('>', 'HELP + bacon.assist - Lists all commands')")
+            nl()
+            setup.write(f"      print('[!]', 'Additional Info: https://docs.google.com/document/d/1djYxjT0UCwTl-UUAX233mxEjeNGiuUFQ-mh3usPexVs/edit?usp=sharing')")
             progress4 = 5
-            time.sleep(1)
+            time.sleep(2)
             os.system('cls')
             bclass()
             cclass()
