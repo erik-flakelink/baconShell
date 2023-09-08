@@ -1,5 +1,5 @@
 class bacon:
-    VERSION = "0.0.2"
+    VERSION = "0.0.5"
     UPDATE = False
     NAME = "baconShell"
 class colors:
