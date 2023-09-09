@@ -365,7 +365,7 @@ while stg1 == True:
             nl()
             setup.write(f"      print('>', 'HELP + BACON.assist - Lists all commands')")
             nl()
-            setup.write(f"      print('[!]', 'Additional Info: https://docs.google.com/document/d/1djYxjT0UCwTl-UUAX233mxEjeNGiuUFQ-mh3usPexVs/edit?usp=sharing')")
+            setup.write(f"      print('[!]', 'Additional Info: https://docs.google.com/document/d/1uufiwPIdhO7BdfT7AybNLrdKhPBXTC0JRMkL0yy4gwg/edit?usp=sharing')")
             progress4 = 6
             time.sleep(2)
             os.system('cls')
