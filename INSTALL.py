@@ -1,7 +1,8 @@
 class bacon:
-    VERSION = "0.1.1"
+    VERSION = "0.1.3"
     UPDATE = False
     NAME = "baconShell"
+    BACON = "baconShell"
 class colors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -17,15 +18,17 @@ def nl():
 def bclass():
     print(f"{colors.BOLD}{colors.OKGREEN}{bacon.NAME} Installer {bacon.VERSION} {colors.ENDC}")
     if progress == 0:
-        print("BACON CLASS", "[----] 0%")
+        print("BACON CLASS", "[-----] 0%")
     elif progress == 1:
-        print("BACON CLASS", "[=---] 25%")
+        print("BACON CLASS", "[=----] 20%")
     elif progress == 2:
-        print("BACON CLASS", "[==--] 50%")
+        print("BACON CLASS", "[==---] 40%")
     elif progress == 3:
-        print("BACON CLASS", "[===-] 75%")
+        print("BACON CLASS", "[===--] 60%")
     elif progress == 4:
-        print("BACON CLASS", "[====] 100%")
+        print("BACON CLASS", "[====-] 80%")
+    elif progress == 5:
+        print("BACON CLASS", "[=====] 100%")
 def cclass():
     if progress2 == 0:
         print("COLORS CLASS", "[----------] 0%")
@@ -75,19 +78,21 @@ def session():
         print("SESSION", "[=====] 100%")
 def com():
     if progress4 == 0:
-        print("COMMANDS", "[------] 0%")
+        print("COMMANDS", "[-------] 0%")
     elif progress4 == 1:
-        print("COMMANDS", "[=-----] 17%")
+        print("COMMANDS", "[=------] 14%")
     elif progress4 == 2:
-        print("COMMANDS", "[==----] 33%")
+        print("COMMANDS", "[==-----] 29%")
     elif progress4 == 3:
-        print("COMMANDS", "[===---] 50%")
+        print("COMMANDS", "[===----] 43%")
     elif progress4 == 4:
-        print("COMMANDS", "[====--] 66%")
+        print("COMMANDS", "[====---] 57%")
     elif progress4 == 5:
-        print("COMMANDS", "[=====-] 83%")
+        print("COMMANDS", "[=====--] 71%")
     elif progress4 == 6:
-        print("COMMANDS", "[======] 100%")
+        print("COMMANDS", "[======-] 86%")
+    elif progress4 == 7:
+        print("COMMANDS", "[=======] 100%")
 import os
 import time
 print(f"{colors.BOLD}{colors.OKGREEN}{bacon.NAME} Installer {bacon.VERSION} {colors.ENDC}")
@@ -125,6 +130,12 @@ while stg1 == True:
             nl()
             setup.write(f"   NAME = '{bacon.VERSION}'")
             progress = 4
+            time.sleep(0.5)
+            os.system('cls')
+            bclass()
+            nl()
+            setup.write(f"   BACON = '{bacon.BACON}'")
+            progress = 5
             time.sleep(0.5)
             os.system('cls')
             bclass()
@@ -301,6 +312,8 @@ while stg1 == True:
             com()
             nl()
             setup.write(f"  elif command == 'BACON':\n")
+            setup.write(f"      print('>', '{bacon.BACON}')")
+            nl()
             setup.write(f"      print('>', '{bacon.NAME}')")
             nl()
             setup.write(f"      print('>', '{bacon.VERSION}')")
@@ -310,6 +323,17 @@ while stg1 == True:
             setup.write(f"  elif command == 'BACON.id':\n")
             setup.write(f"      print('>', '{bacon.NAME}')")
             progress4 = 4
+            time.sleep(1)
+            os.system('cls')
+            bclass()
+            cclass()
+            iclass()
+            session()
+            com()
+            nl()
+            setup.write(f"  elif command == 'BACON.bacon' or command == '.bacon':\n")
+            setup.write(f"      print('>', '{bacon.BACON}')")
+            progress4 = 5
             time.sleep(1)
             os.system('cls')
             bclass()
@@ -331,16 +355,18 @@ while stg1 == True:
             nl()
             setup.write(f"      print('>', 'BACON - Shows baconShell details')")
             nl()
+            setup.write(f"      print('>', 'BACON.bacon + .bacon - Shell Kernel ID')")
+            nl()
             setup.write(f"      print('>', 'BACON.id - Shows the ID of baconShell')")
             nl()
             setup.write(f"      print('>', 'BACON.ver - Shows baconShell version')")
             nl()
             setup.write(f"      print('>', 'BACON.dump - Configures Uninstallation File')")
             nl()
-            setup.write(f"      print('>', 'HELP + bacon.assist - Lists all commands')")
+            setup.write(f"      print('>', 'HELP + BACON.assist - Lists all commands')")
             nl()
             setup.write(f"      print('[!]', 'Additional Info: https://docs.google.com/document/d/1djYxjT0UCwTl-UUAX233mxEjeNGiuUFQ-mh3usPexVs/edit?usp=sharing')")
-            progress4 = 5
+            progress4 = 6
             time.sleep(2)
             os.system('cls')
             bclass()
@@ -381,7 +407,7 @@ while stg1 == True:
             setup.write(f"          nl()")
             nl()
             setup.write(f"          w.write('time.sleep(10)')")
-            progress4 = 6
+            progress4 = 7
             time.sleep(3)
             os.system('cls')
             bclass()
